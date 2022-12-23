@@ -1,8 +1,12 @@
 ## Change log
 ----------------------
 
-Version 1.1-SNAPSHOT
+Version 1.1
 -------------
+
+ADDED:
+
+- new export for other modules can use ITree interface
 
 Version 1
 -------------
