@@ -172,6 +172,13 @@ public interface ITree<V, T> extends Serializable
 	boolean hasChildren();
 
 	/**
+	 * Checks if this node has a next sibling
+	 *
+	 * @return true, if successful
+	 */
+	boolean hasNextSibling();
+
+	/**
 	 * Checks if this tree node has a parent
 	 *
 	 * @return true, if successful
@@ -184,13 +191,6 @@ public interface ITree<V, T> extends Serializable
 	 * @return true, if successful
 	 */
 	boolean hasPreviousSibling();
-
-	/**
-	 * Checks if this node has a next sibling
-	 *
-	 * @return true, if successful
-	 */
-	boolean hasNextSibling();
 
 	/**
 	 * Checks if this node is a leaf
