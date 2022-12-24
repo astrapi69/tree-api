@@ -179,6 +179,20 @@ public interface ITree<V, T> extends Serializable
 	boolean hasParent();
 
 	/**
+	 * Checks if this node has a previous sibling
+	 *
+	 * @return true, if successful
+	 */
+	boolean hasPreviousSibling();
+
+	/**
+	 * Checks if this node has a next sibling
+	 *
+	 * @return true, if successful
+	 */
+	boolean hasNextSibling();
+
+	/**
 	 * Checks if is leaf.
 	 *
 	 * @return true, if is leaf

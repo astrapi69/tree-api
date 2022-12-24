@@ -4,7 +4,10 @@
 Version 1.2-SNAPSHOT
 -------------
 
+ADDED:
 
+- new method hasPreviousSilbing in interface ITree created that checks if a node has a previous sibling
+- new method hasNextSilbing in interface ITree created that checks if a node has a next sibling
 
 Version 1.1
 -------------
