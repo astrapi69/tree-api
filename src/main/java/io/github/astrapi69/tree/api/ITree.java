@@ -31,7 +31,7 @@ import java.util.List;
 import lombok.NonNull;
 
 /**
- * The Interface {@link ITree} holds the children in a {@link Collection} object
+ * The interface {@link ITree} represents a generic tree structure
  *
  * @param <V>
  *            the generic type of the value
@@ -42,7 +42,7 @@ public interface ITree<V, T> extends Serializable
 {
 
 	/**
-	 * Adds the given child
+	 * Adds the given child to this tree node
 	 *
 	 * @param child
 	 *            the child
@@ -50,7 +50,7 @@ public interface ITree<V, T> extends Serializable
 	void addChild(final T child);
 
 	/**
-	 * Adds all the given children
+	 * Adds all the given children to this tree node
 	 *
 	 * @param children
 	 *            the children to add
@@ -59,46 +59,46 @@ public interface ITree<V, T> extends Serializable
 
 	/**
 	 * Returns all siblings of this node in the parent's children list. Returns null if this node is
-	 * the root.
+	 * the root
 	 *
-	 * @return Returns all siblings of this node or null if this node is the root.
+	 * @return Returns all siblings of this node or null if this node is the root
 	 */
 	Collection<T> getAllSiblings();
 
 	/**
 	 * Returns the previous sibling of this node in the parent's children list. Returns null if this
-	 * node is the root or is the parent's first child.
+	 * node is the root or is the parent's first child
 	 *
 	 * @return the next sibling of this node or null if this node is the root or is the parent's
-	 *         last child.
+	 *         last child
 	 */
 	T getPreviousSibling();
 
 	/**
 	 * Returns the next sibling of this node in the parent's children list. Returns null if this
-	 * node is the root or is the parent's last child.
+	 * node is the root or is the parent's last child
 	 *
 	 * @return the next sibling of this node or null if this node is the root or is the parent's
-	 *         last child.
+	 *         last child
 	 */
 	T getNextSibling();
 
 	/**
-	 * Gets the child count.
+	 * Gets the child count of this tree node
 	 *
 	 * @return the child count
 	 */
 	int getChildCount();
 
 	/**
-	 * Gets the children.
+	 * Gets the children of this tree node
 	 *
 	 * @return the children
 	 */
 	Collection<T> getChildren();
 
 	/**
-	 * Sets the children.
+	 * Sets the children of this tree node
 	 *
 	 * @param children
 	 *            the new children
@@ -106,14 +106,14 @@ public interface ITree<V, T> extends Serializable
 	void setChildren(final Collection<T> children);
 
 	/**
-	 * Gets the optional display value.
+	 * Gets the optional display value of this tree node
 	 *
 	 * @return the display value
 	 */
 	String getDisplayValue();
 
 	/**
-	 * Sets the optional display value.
+	 * Sets the optional display value of this tree node
 	 *
 	 * @param displayValue
 	 *            the new optional display value
@@ -121,21 +121,21 @@ public interface ITree<V, T> extends Serializable
 	void setDisplayValue(final String displayValue);
 
 	/**
-	 * Returns the distance from the root to this node. Returns 0 if this node is the root.
+	 * Returns the distance from the root to this node. Returns 0 if this node is the root
 	 *
-	 * @return the level from this node.
+	 * @return the level from this node
 	 */
 	int getLevel();
 
 	/**
-	 * Gets the parent.
+	 * Gets the parent of this tree node
 	 *
 	 * @return the parent
 	 */
 	T getParent();
 
 	/**
-	 * Sets the parent.
+	 * Sets the parent of this tree node
 	 *
 	 * @param parent
 	 *            the new parent
@@ -150,14 +150,14 @@ public interface ITree<V, T> extends Serializable
 	T getRoot();
 
 	/**
-	 * Gets the value.
+	 * Gets the value of this tree node
 	 *
 	 * @return the value
 	 */
 	V getValue();
 
 	/**
-	 * Sets the value.
+	 * Sets the value of this tree node
 	 *
 	 * @param value
 	 *            the new value
@@ -165,14 +165,14 @@ public interface ITree<V, T> extends Serializable
 	void setValue(final V value);
 
 	/**
-	 * Checks for children.
+	 * Checks if this tree node has children
 	 *
 	 * @return true, if successful
 	 */
 	boolean hasChildren();
 
 	/**
-	 * Checks for parent
+	 * Checks if this tree node has a parent
 	 *
 	 * @return true, if successful
 	 */
@@ -193,9 +193,9 @@ public interface ITree<V, T> extends Serializable
 	boolean hasNextSibling();
 
 	/**
-	 * Checks if is leaf.
+	 * Checks if this node is a leaf
 	 *
-	 * @return true, if is leaf
+	 * @return true, if this node is a leaf
 	 */
 	boolean isLeaf();
 
@@ -208,9 +208,9 @@ public interface ITree<V, T> extends Serializable
 	void setLeaf(boolean leaf);
 
 	/**
-	 * Checks if is node.
+	 * Checks if this node is a node
 	 *
-	 * @return true, if is node
+	 * @return true, if this node is a node
 	 */
 	boolean isNode();
 
@@ -222,7 +222,7 @@ public interface ITree<V, T> extends Serializable
 	boolean isRoot();
 
 	/**
-	 * Removes the child.
+	 * Removes the given child from this tree node
 	 *
 	 * @param child
 	 *            the child
@@ -230,22 +230,22 @@ public interface ITree<V, T> extends Serializable
 	void removeChild(final T child);
 
 	/**
-	 * Removes all the children
+	 * Removes all the children from this tree node
 	 */
 	void clearChildren();
 
 	/**
-	 * Removes all the descendants
+	 * Removes all the descendants from this tree node
 	 */
 	void clearAll();
 
 	/**
-	 * Removes all the children
+	 * Removes all the children from this tree node
 	 */
 	void removeChildren();
 
 	/**
-	 * Removes all the given children
+	 * Removes all the given children from this tree node
 	 *
 	 * @param children
 	 *            the children to remove
@@ -263,12 +263,11 @@ public interface ITree<V, T> extends Serializable
 	Collection<T> findAllByValue(final V value);
 
 	/**
-	 * Find all {@link ITree} objects that have the same value as the given value
+	 * Find the first {@link ITree} object that have the same value as the given value
 	 *
 	 * @param value
 	 *            the value for the search process
-	 * @return a {@link Collection} object with all found occurrences that have the same value as
-	 *         the given value
+	 * @return the first {@link ITree} object that have the same value as the given value
 	 */
 	T findByValue(final @NonNull V value);
 
@@ -287,9 +286,9 @@ public interface ITree<V, T> extends Serializable
 	 * this tree node
 	 *
 	 * @param treeNodes
-	 *            the children to add
-	 * @return true if the given {@link Collection} object of {@link ITree} objects are descendants
-	 *         of this tree node otherwise false
+	 *            the tree nodes
+	 * @return true if the given {@link Collection} of tree node objects are descendants of this
+	 *         tree node otherwise false
 	 */
 	boolean containsAll(final @NonNull Collection<T> treeNodes);
 

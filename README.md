@@ -13,7 +13,7 @@
 
 </div>
 
-Provides an api for handling with tree structures
+Provides an api for operating with tree structures
 
 > Please support this project by simply putting a Github <a class="github-button" href="https://github.com/astrapi69/tree-api" data-icon="octicon-star" aria-label="Star astrapi69/tree-api on GitHub">
 > Star ⭐</a>

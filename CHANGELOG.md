@@ -9,6 +9,10 @@ ADDED:
 - new method hasPreviousSilbing in interface ITree created that checks if a node has a previous sibling
 - new method hasNextSilbing in interface ITree created that checks if a node has a next sibling
 
+CHANGED:
+
+- javadoc optimized
+
 Version 1.1
 -------------
 
