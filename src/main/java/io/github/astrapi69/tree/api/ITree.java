@@ -167,35 +167,44 @@ public interface ITree<V, T> extends Serializable
 	/**
 	 * Checks if this tree node has children
 	 *
-	 * @return true, if successful
+	 * @return true, if this tree node has children otherwise false
 	 */
 	boolean hasChildren();
 
 	/**
+	 * Checks if the given tree node is a child of this tree node
+	 *
+	 * @param treeNode
+	 *            the tree node to check
+	 * @return true, if the given tree node is a child of this tree node otherwise false
+	 */
+	boolean isChild(final T treeNode);
+
+	/**
 	 * Checks if this node has a next sibling
 	 *
-	 * @return true, if successful
+	 * @return true, if this node has a next sibling otherwise false
 	 */
 	boolean hasNextSibling();
 
 	/**
 	 * Checks if this tree node has a parent
 	 *
-	 * @return true, if successful
+	 * @return true, if this tree node has a parent otherwise false
 	 */
 	boolean hasParent();
 
 	/**
 	 * Checks if this node has a previous sibling
 	 *
-	 * @return true, if successful
+	 * @return true, if this node has a previous sibling otherwise false
 	 */
 	boolean hasPreviousSibling();
 
 	/**
 	 * Checks if this node is a leaf
 	 *
-	 * @return true, if this node is a leaf
+	 * @return true, if this node is a leaf otherwise false
 	 */
 	boolean isLeaf();
 
@@ -210,7 +219,7 @@ public interface ITree<V, T> extends Serializable
 	/**
 	 * Checks if this node is a node
 	 *
-	 * @return true, if this node is a node
+	 * @return true, if this node is a node otherwise false
 	 */
 	boolean isNode();
 
