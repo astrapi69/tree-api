@@ -217,6 +217,34 @@ public interface ITree<V, T> extends Serializable
 	void setLeaf(boolean leaf);
 
 	/**
+	 * Checks if this {@link ITree} is an ancestor {@link ITree} object
+	 *
+	 * @param treeNode
+	 *            the tree node to check
+	 * @return true, if this {@link ITree} is an ancestor {@link ITree} object otherwise false
+	 */
+	boolean isAncestor(final T treeNode);
+
+	/**
+	 * Checks if this {@link ITree} is a descendant {@link ITree} object
+	 *
+	 * @param treeNode
+	 *            the tree node to check
+	 * @return true, if this {@link ITree} is a descendant {@link ITree} object otherwise false
+	 */
+	boolean isDescendant(final T treeNode);
+
+	/**
+	 * Moves this {@link ITree} object to the new given parent {@link ITree} object
+	 *
+	 * @param newParentTreeNode
+	 *            the new parent tree node
+	 * @return true, if this {@link ITree} object was moved to the new given parent {@link ITree}
+	 *         object otherwise false
+	 */
+	boolean move(final T newParentTreeNode);
+
+	/**
 	 * Checks if this node is a node
 	 *
 	 * @return true, if this node is a node otherwise false
@@ -226,7 +254,7 @@ public interface ITree<V, T> extends Serializable
 	/**
 	 * Checks if this {@link ITree} is the root {@link ITree} object
 	 *
-	 * @return true, if this {@link ITree} is the root {@link ITree} object
+	 * @return true, if this {@link ITree} is the root {@link ITree} object otherwise false
 	 */
 	boolean isRoot();
 

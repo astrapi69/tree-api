@@ -4,6 +4,19 @@
 Version 1.4-SNAPSHOT
 -------------
 
+ADDED:
+
+- new method 'isAncestor' in interface ITree created that checks if a given tree node is an ancestor of this tree node
+- new method 'isDescendant' in interface ITree created that checks if a given tree node is a descendant of this tree node
+- new method 'move' in interface ITree created that moves a given tree node to the given new parent tree node
+
+CHANGED:
+
+- update gradle to new version 8.3-rc-4
+- update of gradle-plugin dependency 'lombok-plugin' to new minor version 8.2.2
+- update of gradle-plugin dependency 'spotless-plugin-gradle' to new minor version 6.20.0
+- update of test dependency junit-jupiter-* to new minor version 5.10.0
+
 Version 1.3
 -------------
 
