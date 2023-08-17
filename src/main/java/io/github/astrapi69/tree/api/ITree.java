@@ -27,6 +27,7 @@ package io.github.astrapi69.tree.api;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import lombok.NonNull;
 
@@ -48,6 +49,16 @@ public interface ITree<V, T> extends Serializable
 	 *            the child
 	 */
 	void addChild(final T child);
+
+	/**
+	 * Adds the given child to this tree node
+	 *
+	 * @param child
+	 *            the child
+	 * @param index
+	 *            the index of the child to insert
+	 */
+	void addChild(final T child, int index);
 
 	/**
 	 * Adds all the given children to this tree node
@@ -96,6 +107,24 @@ public interface ITree<V, T> extends Serializable
 	 * @return the children
 	 */
 	Collection<T> getChildren();
+
+	/**
+	 * Gets the child tree node from the given index
+	 *
+	 * @param index
+	 *            the index of the child to get
+	 * @return an {@link Optional} object with the child tree node from the given index
+	 */
+	Optional<T> getChildAt(int index);
+
+	/**
+	 * Gets the index of the given child in this tree node
+	 * 
+	 * @param child
+	 *            the child to resolve the index
+	 * @return the index of the given child in this tree node
+	 */
+	int getChildIndex(T child);
 
 	/**
 	 * Sets the children of this tree node

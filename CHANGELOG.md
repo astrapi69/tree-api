@@ -4,7 +4,15 @@
 Version 1.5-SNAPSHOT
 -------------
 
+ADDED:
 
+- new method 'addChild' to insert a child tree node with a specific given index
+- new method 'getChildAt' to get an optional of the child tree node with the given index
+- new method 'getChildIndex' to the index from the given child tree node
+
+CHANGED:
+
+- update gradle to new version 8.3
 
 Version 1.4
 -------------
