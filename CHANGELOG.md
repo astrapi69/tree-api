@@ -8,6 +8,13 @@ ADDED:
 
 - new libs.versions.toml file for new automatic catalog versions update
 
+CHANGED:
+
+- update to jdk version 17
+- update gradle to new version 8.8
+- update of lombok version to 1.18.32
+- update of gradle-plugin dependency 'spotless-plugin-gradle' to new minor version 7.0.0.BETA1
+- update of gradle-plugin dependency 'grgit-gradle' to new minor version 5.2.2
 
 Version 1.5
 -------------
