@@ -20,7 +20,7 @@
  */
 module io.github.astrapisixtynine.tree.api
 {
-	requires lombok;
+	requires static lombok;
 
 	exports io.github.astrapi69.tree.api;
 }
