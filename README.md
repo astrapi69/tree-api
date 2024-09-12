@@ -13,7 +13,61 @@
 
 </div>
 
-Provides an api for operating with tree structures
+## Tree Data Structure Overview
+
+A **tree** is a hierarchical data structure made up of nodes, starting from a root node and branching out into subnodes.
+Each node contains a value and can have multiple children, with the rule that no child points back to the root or shares
+any duplicate connections. This structure forms a recursive, non-linear representation of data, ideal for modeling
+hierarchical relationships.
+
+**Key Terminology:**
+
+* **Node**: A single element in the tree.
+* **Edge**: A connection between two nodes.
+* **Root**: The topmost node with no parent.
+* **Parent**: A node connected to one or more successors.
+* **Child**: A successor node connected to its parent.
+* **Leaf**: A node without children.
+* **Path**: The sequence of nodes connecting one node to another.
+* **Height**: The number of edges between a node and its furthest descendant.
+* **Depth**: The number of edges between the root and a specific node.
+* **Sibling**: Nodes that share the same parent.
+* **Subtree**: A node and all of its descendants.
+
+**Tree Traversal Methods:**
+
+* **Pre-order**: Visit the current node, then recursively traverse its subtrees from left to right.
+* **Post-order**: Recursively traverse each subtree from left to right, visiting the current node last.
+
+**Tree Representation Methods:**
+
+1. **Array-of-Pointers**: Each node holds an array of references to its children. This allows quick access to any child
+   but can be inefficient if many pointers are null.
+2. **Leftmost-Child—Right-Sibling**: Each node points to its leftmost child and right sibling, providing an efficient
+   way to traverse through siblings.
+
+**Expression Trees:**
+Expression trees represent mathematical expressions in a structured way, where operators and operands are arranged to
+clarify precedence. Traversing this tree using pre-order or post-order traversal helps evaluate or transform the
+expressions into infix, prefix, or postfix forms.
+
+**Structural Induction:**
+A method for proving the correctness of tree-related algorithms. It involves proving a base case (a tree with a single
+node) and then showing the correctness of the recursive case (a tree with subtrees).
+
+## ITree Interface Overview
+
+The `ITree<V, T>` interface provides a generic structure for representing trees where each node can hold a value of type
+`V` and have children of type `T`. This flexible design allows for building complex hierarchical models while keeping
+the structure modular and reusable.
+
+### Key Features of the ITree Interface:
+
+* **Node Management**: Add, remove, and manage children of a node.
+* **Tree Traversal**: Traverse nodes in pre-order and post-order, ensuring each node is visited systematically.
+* **Sibling Navigation**: Access sibling nodes in relation to their parent node.
+* **Parent-Child Relationships**: Easily navigate between parent and child nodes, and determine the depth and level of
+  nodes in the tree.
 
 > Please support this project by simply putting a Github <a class="github-button" href="https://github.com/astrapi69/tree-api" data-icon="octicon-star" aria-label="Star astrapi69/tree-api on GitHub">
 > Star ⭐</a>
