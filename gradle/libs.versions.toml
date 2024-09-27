@@ -8,8 +8,8 @@ gradle-plugin-lombok-version = "8.10"
 gradle-plugin-spotless-version = "7.0.0.BETA2"
 gradle-plugin-version-catalog-update-version = "0.8.4"
 gradle-plugin-versions-version = "0.51.0"
-junit-jupiter-version = "5.11.0"
-junit-platform-launcher-version = "1.11.0"
+junit-jupiter-version = "5.11.1"
+junit-platform-launcher-version = "1.11.1"
 lombok-version = "1.18.34"
 meanbean-version = "2.0.3"
 silly-io-version = "3.1"
@@ -28,14 +28,13 @@ throwable = { module = "io.github.astrapi69:throwable", version.ref = "throwable
 
 [bundles]
 unit-testing = [
-    "throwable",
     "commons-text",
-    "gradle-migration-data",
-    "throwable",
     "file-worker",
-    "silly-io",
+    "gradle-migration-data",
     "junit-jupiter",
     "meanbean",
+    "silly-io",
+    "throwable",
 ]
 
 [plugins]

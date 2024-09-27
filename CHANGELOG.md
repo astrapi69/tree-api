@@ -1,9 +1,14 @@
 ## Change log
 ----------------------
 
-Version 2.1-SNAPSHOT
+Version 2.1
 -------------
 
+CHANGED:
+
+- update gradle to new version 8.10.2
+- update of test dependency junit-jupiter to new minor version 5.11.1
+- update of test dependency junit-platform-launcher to new minor version 1.11.1
 
 Version 2
 -------------
