@@ -4,6 +4,54 @@
 Version 2.2-SNAPSHOT
 -------------
 
+### Gradle Plugins
+- **com.diffplug.spotless:com.diffplug.spotless.gradle.plugin**
+    - Updated from `7.0.0.BETA2` to `7.0.0.BETA4`
+
+- **io.freefair.lombok:io.freefair.lombok.gradle.plugin**
+    - Updated from `8.10` to `8.11`
+    - [Repository](https://github.com/freefair/gradle-plugins)
+
+- **nl.littlerobots.version-catalog-update:nl.littlerobots.version-catalog-update.gradle.plugin**
+    - Updated from `0.8.4` to `0.8.5`
+    - [Repository](https://github.com/littlerobots/version-catalog-update-plugin)
+
+- **org.ajoberstar.grgit:org.ajoberstar.grgit.gradle.plugin**
+    - Updated from `5.2.2` to `5.3.0`
+    - [Repository](https://github.com/ajoberstar/grgit)
+
+### Libraries
+- **io.github.astrapi69:file-worker**
+    - Updated from `17.4` to `19.0`
+    - [Repository](https://github.com/astrapi69/file-worker)
+
+- **io.github.astrapi69:gradle-migration-data**
+    - Updated from `2.4` to `3.0`
+    - [Repository](https://github.com/astrapi69/gradle-migration-data)
+
+- **io.github.astrapi69:silly-io**
+    - Updated from `3.1` to `3.4`
+    - [Repository](https://github.com/astrapi69/silly-io)
+
+- **org.apache.logging.log4j:log4j-core**
+    - Updated from `2.17.1` to `3.0.0-beta3`
+    - [Repository](https://logging.apache.org/log4j/3.x/)
+
+- **org.junit.jupiter:junit-jupiter**
+    - Updated from `5.11.1` to `5.11.3`
+    - [Repository](https://junit.org/junit5/)
+
+- **org.junit.platform:junit-platform-launcher**
+    - Updated from `1.11.1` to `1.11.3`
+    - [Repository](https://junit.org/junit5/)
+
+- **org.projectlombok:lombok**
+    - Updated from `1.18.34` to `1.18.36`
+    - [Repository](https://projectlombok.org)
+
+## Gradle Release Candidate Update
+- **Gradle**
+    - Updated from `8.10.2` to `8.11.1`
 
 Version 2.1
 -------------
