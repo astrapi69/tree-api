@@ -69,6 +69,52 @@ the structure modular and reusable.
 * **Parent-Child Relationships**: Easily navigate between parent and child nodes, and determine the depth and level of
   nodes in the tree.
 
+tree-api ships only the contract, no concrete node class. Every `T` a consumer plugs in must implement
+`ITree<V, T>` itself — see [Reference implementation](#reference-implementation) below for one that already does.
+
+```java
+public interface ITree<V, T> extends Serializable
+{
+    void addChild(T child);
+    Collection<T> getChildren();
+    T getParent();
+    void setParent(T parent);
+    boolean isRoot();
+    boolean isLeaf();
+    boolean isAncestor(T treeNode);
+    boolean isDescendant(T treeNode);
+    boolean move(T newParentTreeNode);
+    List<T> toList();
+    Collection<T> traverse();
+    // ... and more: siblings, level, findByValue/findAllByValue, contains/containsAll, ...
+}
+```
+
+## Reference implementation
+
+[`gen-tree`](https://github.com/astrapi69/gen-tree) is the reference Java implementation of `ITree<V, T>`: mutable,
+parent-pointer nodes with the full contract built in, plus query utilities (`height`, `lowestCommonAncestor`,
+`filterTree`, `cloneSubtree`, `reduceTree`) and flat-list ⇄ tree conversion for persistence. It is what you actually
+add to a project's dependencies to get a working `ITree`:
+
+```java
+implementation("io.github.astrapi69:gen-tree:$genTreeVersion")
+```
+
+```java
+BaseTreeNode<String, Long> root = BaseTreeNode.<String, Long> builder().id(1L).value("root").build();
+BaseTreeNode<String, Long> child = BaseTreeNode.<String, Long> builder().id(2L).value("child").build();
+root.addChild(child);
+
+root.isRoot();     // true
+child.getLevel();  // 1
+child.getParent(); // root
+```
+
+A TypeScript redesign of the same tree model — immutable nodes, copy-on-write mutation, generator-based traversal —
+lives in [`tree-kit`](https://github.com/astrapi69/tree-kit), a from-scratch port rather than a transliteration, for
+projects that need the same vocabulary (`height`, `lowestCommonAncestor`, `filterTree`, ...) on the TypeScript side.
+
 > Please support this project by simply putting a Github <a class="github-button" href="https://github.com/astrapi69/tree-api" data-icon="octicon-star" aria-label="Star astrapi69/tree-api on GitHub">
 > Star ⭐</a>
 >
@@ -234,5 +280,8 @@ Do not hesitate to contact the tree-api developers with your questions, concerns
 - Feature requests, questions and bug reports can be reported at the [issues page](https://github.com/astrapi69/tree-api/issues).
 
 ## Similar projects
+
+* [gen-tree](https://github.com/astrapi69/gen-tree) The reference Java implementation of `ITree<V, T>`
+* [tree-kit](https://github.com/astrapi69/tree-kit) TypeScript sibling: immutable nodes, copy-on-write mutation, generator traversal
 
 ## Credits
