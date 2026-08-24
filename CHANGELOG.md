@@ -4,6 +4,18 @@
 Version 2.2-SNAPSHOT
 -------------
 
+CHANGED:
+
+- migrated publishing to the Sonatype Central Portal (releases over the OSSRH staging API, snapshots to central.sonatype.com) with in-memory GPG signing from GPG_PRIVATE_KEY/GPG_PASSPHRASE or credentials from CENTRAL_USERNAME/CENTRAL_PASSWORD
+- updated gradle wrapper to new version 9.7.0
+- new gradle plugin org.gradle.toolchains.foojay-resolver-convention in version 1.0.0 for automatic JDK provisioning
+- replaced the license-gradle-plugin with the spotless licenseHeaderFile step and added src/main/resources/license-header.txt
+- removed the grgit gradle plugin; the tagRelease task now uses a plain git Exec task in gradle/tagging.gradle, so the gradle configuration cache works without workarounds
+- enabled the gradle configuration cache
+- removed unused test dependencies commons-text, gradle-migration-data, silly-io, file-worker and meanbean
+- added Makefile with build, test, release and publish targets
+- github-actions workflow: removed obsolete ossrh secrets, updated setup-gradle to v4 and added codecov-action v5
+
 ### Gradle Plugins
 - **com.diffplug.spotless:com.diffplug.spotless.gradle.plugin**
     - Updated from `7.0.0.BETA2` to `7.0.0.BETA4`
