@@ -6,6 +6,7 @@ Version 2.2-SNAPSHOT
 
 CHANGED:
 
+- update to jdk version 21
 - migrated publishing to the Sonatype Central Portal (releases over the OSSRH staging API, snapshots to central.sonatype.com) with in-memory GPG signing from GPG_PRIVATE_KEY/GPG_PASSPHRASE or credentials from CENTRAL_USERNAME/CENTRAL_PASSWORD
 - updated gradle wrapper to new version 9.7.0
 - new gradle plugin org.gradle.toolchains.foojay-resolver-convention in version 1.0.0 for automatic JDK provisioning
