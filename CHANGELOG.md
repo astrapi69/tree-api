@@ -1,8 +1,16 @@
 ## Change log
 ----------------------
 
-Version 2.3-SNAPSHOT
+Version 2.2.1
 -------------
+
+ADDED:
+
+- new github-actions workflow publish.yml for publishing to Maven Central via the Central Portal on a RELEASE-* tag push
+
+CHANGED:
+
+- documented the ITree contract, the gen-tree reference implementation and the tree-kit TypeScript sibling in the README
 
 Version 2.2
 -------------
