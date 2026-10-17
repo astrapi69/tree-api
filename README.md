@@ -285,3 +285,12 @@ Do not hesitate to contact the tree-api developers with your questions, concerns
 * [tree-kit](https://github.com/astrapi69/tree-kit) TypeScript sibling: immutable nodes, copy-on-write mutation, generator traversal
 
 ## Credits
+
+## Git hooks
+
+The repository's git hooks live in `.githooks`: `commit-msg` where present, and `pre-commit`, which refuses a
+commit whose files Spotless would format. Activate them once per clone or worktree:
+
+```bash
+git config core.hooksPath .githooks
+```
